@@ -78,6 +78,7 @@ void ordonare_crescatoare()
 			}
 		}
 }
+// ordonez descrescator frecventele de aparitie
 void ordonare_descrescatoare()
 {
 	for (int i = 0; i < 26; i++)
@@ -128,6 +129,7 @@ void *threadFunction(void *var)
 
 	return NULL;
 }
+//read args
 void read_cmd_args(int argc, char **argv)
 {
 	if (argc < 6)
