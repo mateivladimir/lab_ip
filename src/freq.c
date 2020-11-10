@@ -59,6 +59,7 @@ void aplicare_strtok()
 		p = strtok(NULL, " ");
 	}
 }
+// ordonez crecator numerele
 void ordonare_crescatoare()
 {
 	char *aux2 = NULL;
