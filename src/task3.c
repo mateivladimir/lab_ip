@@ -59,7 +59,6 @@ void aplicare_strtok()
 		p = strtok(NULL, " ");
 	}
 }
-// ordonez crecator numerele
 void ordonare_crescatoare()
 {
 	char *aux2 = NULL;
@@ -78,7 +77,6 @@ void ordonare_crescatoare()
 			}
 		}
 }
-// ordonez descrescator frecventele de aparitie
 void ordonare_descrescatoare()
 {
 	for (int i = 0; i < 26; i++)
@@ -129,7 +127,6 @@ void *threadFunction(void *var)
 
 	return NULL;
 }
-//read args
 void read_cmd_args(int argc, char **argv)
 {
 	if (argc < 6)
@@ -161,7 +158,7 @@ void init()
 	//alocam un char* unde vom salva ce avem in fisier
 	N_fis = indexi.y - indexi.x +1;
 	fis = (char *)malloc(N_fis);
-	fclose(f_index);
+
 	//Deschidem fisierul input.txt, citesc si salvez in fis* portiunea de interes
 	FILE *f_input = fopen(input_text_file, "r");
 	if (f_input == NULL)
@@ -172,7 +169,6 @@ void init()
 	fseek(f_input, indexi.x, SEEK_SET);
 	if (fread(fis, 1, N_fis -1, f_input))
 		;
-	fclose(f_input);
 
 	//Initializam vectorul de structuri
 	for (int i = 0; i < 26; i++)
@@ -188,7 +184,6 @@ void init()
 		return;
 	if (fread(fis_real, 1, 26, f_real))
 		;
-	fclose(f_real);
 }
 
 int main(int argc, char **argv)
