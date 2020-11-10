@@ -215,6 +215,11 @@ int main(int argc, char **argv)
 	{
 		fprintf(f_out, "%s\n", cuvinte[i]);
 	}
+	//reafisare cuvinte
+	for (int i = 0; i < nr; i++)
+	{
+		fprintf(f_out, "%s\n", cuvinte[i]);
+	}
 
 	return 0;
 }
